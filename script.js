@@ -78,7 +78,7 @@ let currAcc;
 
 loginBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  let userName = document.querySelector("#userN");
+  let userName = document.querySelector("#userN").toLowerCase();
   let password = document.querySelector("#pin");
   currAcc = accounts.find((acc) => acc.userName == userName.value);
   if (userName.value && currAcc && password.value == currAcc.pin) {
@@ -421,3 +421,4 @@ const cancelfn2 = function () {
   clearInterval(timerinterval);
   count = 60;
 };
+
