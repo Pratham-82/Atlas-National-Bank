@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AN Bank</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>ATLAS NATIONAL BANK</h1>
+        <div class="nav-links hidden">
+          <ul>
+            <li class="home-nav"><a href="" class="link">HOME</a></li>
+            <li class="transfer-nav"><a href="" class="link">TRANSFER</a></li>
+            <li class="loan-nav"><a href="" class="link">LOAN</a></li>
+            <li class="logout-nav"><a href="">LOGOUT</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="login-page">
+        <div class="container">
+          <h2>WELCOME BACK</h2>
+          <form class="login-ui">
+            <div class="username">
+              <label for="userN">Username</label>
+              <input type="text" id="userN" class="login-page--input" />
+              <label for="" class="worng"></label>
+            </div>
+            <div class="password">
+              <label for="pin">Pin</label>
+              <input type="text" id="pin" class="login-page--input" />
+              <label for="" class="worng"></label>
+            </div>
+            <button class="login-btn btn">LOGIN</button>
+          </form>
+        </div>
+      </section>
+      <section class="home-page hidden">
+        <h2>Welcome, <span class="wlc-name">Pratham</span></h2>
+        <div class="summary">
+          <div class="summary-chart">
+            <div class="chart">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+          <div class="summary-desc">
+            <h2>Summary</h2>
+            <div class="info">
+              <p>Total Balance : <span class="tatal-bal">2000</span></p>
+              <p>In : <span class="in">2000</span></p>
+              <p>out : <span class="out">2000</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="recent-trans">
+          <h2>Recent Transactions</h2>
+          <ul class="transactions">
+            <li>
+              <div class="sign">+</div>
+              <div class="desc">
+                <div class="amt">1000</div>
+                <div class="date">10/07/2025</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="transfer-page container hidden">
+        <h2>Bank Transfer</h2>
+        <div class="tras-sec">
+          <div class="div1">
+            <div class="div2">
+              <div>
+                <label for="trans-user">Username</label>
+                <input type="text" class="transfer-user" id="trans-user" />
+                <label for="" class="self-trans"></label>
+              </div>
+              <div>
+                <label for="">Amount</label>
+                <input type="text" class="transfer-amt" />
+                <label for="" class="less-bal"></label>
+                <label for=""
+                  >Available Balance <span class="Balance">12</span></label
+                >
+              </div>
+            </div>
+            <div class="div2">
+              <div>
+                <label for="">Pin</label>
+                <input type="text" class="transfer-pin" />
+                <label for="" class="trans-worng-pin"></label>
+              </div>
+              <div>
+                <label for="">Remark</label>
+                <input type="text" class="transfer-remark" />
+              </div>
+            </div>
+          </div>
+          <button class="transfer-btn btn">Transfer</button>
+        </div>
+        <div class="cancel-sec hidden">
+          <h2>Cancel Sec</h2>
+          <div class="sec">
+            <ul>
+              <!-- <li> -->
+              <!-- <div>
+                  <p>10/5/2025</p>
+                </div>
+                <p><span class="timer">60</span> Seconds to cancel</p>
+                <div>
+                  <button class=".cancel-btn btn">Cancel Payment</button>
+                  <p class="amt">$500</p>
+                </div> -->
+              <!-- </li> -->
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="loan-page hidden">
+        <div class="loan-sec container">
+          <h2>Request a Loan</h2>
+          <div class="loan-req">
+            <div class="inp">
+              <label for="">Amount</label>
+              <input type="text" class="loan-amt" />
+            </div>
+            <button class="req-loan--btn btn">Request a Loan</button>
+          </div>
+        </div>
+        <div class="recent-loan container">
+          <h2>Recent Loans</h2>
+          <div class="loans">
+            <ul class="loan-list">
+              <li>
+                <div class="info">
+                  <p>10/5/2025</p>
+                  <p>From AN Bank</p>
+                </div>
+                <div>
+                  <button class=".repay-loan btn">Repay Now</button>
+                  <p class="amt">$500</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
