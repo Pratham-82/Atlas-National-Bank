@@ -78,9 +78,11 @@ let currAcc;
 
 loginBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  let userName = document.querySelector("#userN").toLowerCase();
+  let userName = document.querySelector("#userN");
   let password = document.querySelector("#pin");
-  currAcc = accounts.find((acc) => acc.userName == userName.value);
+  currAcc = accounts.find(
+    (acc) => acc.userName == userName.value.toLowerCase()
+  );
   if (userName.value && currAcc && password.value == currAcc.pin) {
     loginPage.classList.add("hidden");
     navLinks.classList.remove("hidden");
@@ -421,4 +423,3 @@ const cancelfn2 = function () {
   clearInterval(timerinterval);
   count = 60;
 };
-
