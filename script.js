@@ -195,7 +195,7 @@ transferBtn.addEventListener("click", () => {
     amt <= currAcc.totalBalance &&
     amt > 0
   ) {
-    alert(`$${amt} is debited from you account in 60 sec`);
+    alert(`$${amt} is debited from you account in 30 sec`);
     cancelSec.classList.remove("hidden");
     intervalWait = setTimeout(() => {
       currAcc.movements.push(Number(-amt));
@@ -208,14 +208,14 @@ transferBtn.addEventListener("click", () => {
       cancelSec.classList.add("hidden");
       homenavfn();
       localSave();
-    }, 60000);
+    }, 30000);
     document.querySelector(".transfer-user").value = "";
     document.querySelector(".transfer-amt").value = "";
     document.querySelector(".transfer-pin").value = "";
     document.querySelector(".transfer-remark").value = "";
     setTimeout(() => {
       cancelSec.classList.add("hidden");
-    }, 60000);
+    }, 30000);
 
     let cancelList = document.querySelector(".sec ul");
     cancelList.innerHTML = "";
@@ -408,7 +408,7 @@ const cancelfn = function (interval) {
       let bt = btn.parentElement.parentElement;
       bt.remove();
       clearInterval(timerinterval);
-      count = 60;
+      count = 30;
     });
   });
 };
@@ -421,6 +421,7 @@ const cancelfn2 = function () {
     cancelSec.classList.add("hidden");
   });
   clearInterval(timerinterval);
-  count = 60;
+  count = 30;
 };
+
 
