@@ -179,7 +179,7 @@ let WrongTransPin = document.querySelector(".trans-worng-pin");
 
 let intervalWait;
 let timerinterval;
-let count = 60;
+let count = 30;
 
 transferBtn.addEventListener("click", () => {
   let username = document.querySelector(".transfer-user").value;
@@ -423,5 +423,6 @@ const cancelfn2 = function () {
   clearInterval(timerinterval);
   count = 30;
 };
+
 
 
