@@ -227,7 +227,7 @@ transferBtn.addEventListener("click", () => {
                 <div>
                   <p>${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}</p>
                 </div>
-                <p><span class="timer">60</span> Seconds to cancel</p>
+                <p><span class="timer">30</span> Seconds to cancel</p>
                 <div>
                   <button class="cancel-btn btn">Cancel Payment</button>
                   <p class="amt">$${amt}</p>
@@ -423,7 +423,3 @@ const cancelfn2 = function () {
   clearInterval(timerinterval);
   count = 30;
 };
-
-
-
-
