@@ -236,7 +236,7 @@ transferBtn.addEventListener("click", () => {
 
     cancelList.appendChild(el);
     cancelfn(intervalWait);
-    setTimeout(cancelfn2, 60000);
+    setTimeout(cancelfn2, 30000);
 
     count = count - 1;
 
@@ -423,6 +423,7 @@ const cancelfn2 = function () {
   clearInterval(timerinterval);
   count = 30;
 };
+
 
 
 
