@@ -195,7 +195,7 @@ transferBtn.addEventListener("click", () => {
     amt <= currAcc.totalBalance &&
     amt > 0
   ) {
-    alert(`$${amt} is debited from you account in 5 sec`);
+    alert(`$${amt} is debited from you account in 60 sec`);
     cancelSec.classList.remove("hidden");
     intervalWait = setTimeout(() => {
       currAcc.movements.push(Number(-amt));
@@ -423,3 +423,4 @@ const cancelfn2 = function () {
   clearInterval(timerinterval);
   count = 60;
 };
+
